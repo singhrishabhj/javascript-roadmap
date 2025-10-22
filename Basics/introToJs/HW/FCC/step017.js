@@ -10,6 +10,7 @@ When you are ready to move on, remove the `console.log` and keep the `count` var
 */
 
 // Solution:
+let character = 'Hello';
 let count = 8;
 
 /*
