@@ -155,3 +155,55 @@ switch (days) {
 }
 
 
+/**
+ * 
+ * Loops
+ * -> while , for loop , do while , for each
+ */
+
+
+for (let num =1 ; num<=10;num++){
+    console.log("Number is :" ,num);
+}
+
+
+/**
+ * fizz bzz
+ * number ->20
+    1->20
+    if number is divisible by 3 ->fizz
+    if number is divisible by 5->buzz
+    if number is divisible by 3 & 5 ->fizz and buzz
+ */
+
+
+    let numbers =20;
+    for(let i = 1; i <= numbers; i++){
+        if(i % 3 === 0 && i% 5 === 0){
+            console.log("fizz");
+
+        }else if(i % 5 === 0){
+            console.log("buzz");
+        }else if (i % 3 === 0){
+            console.log("fizz buzz");
+        }else{
+            console.log(i);
+        }
+    }
+
+
+    //break statement the cursor get out once the condition matches
+
+
+
+    /**
+     * Fucntion : Helps to write reusable block of code create 
+     */
+
+    function fn(){
+        console.log("I am a Function");
+    }
+    console.log("Hello Again");
+
+    fn();
+    fn();
