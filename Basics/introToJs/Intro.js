@@ -287,29 +287,72 @@ console.log("result:", result); // Output: result: 30
 
 
 
-//*****************************
-// STRINGS : How string work in javascript */
+//***********************************************
+// STRINGS: How strings work in JavaScript
+//***********************************************
 
-let string1 = "I am String";
-let string2 = 'i am string' 
-let templateString = `i am also a string but can be wrtitten
-in multiple line`
+// Strings can be created using double quotes, single quotes, or backticks (template literals)
+let string1 = "I am String";       // Double quotes
+let string2 = 'i am string';       // Single quotes
+let templateString = `I am also a string but can be written
+in multiple lines using backticks`;
 
+// Printing strings
+console.log(string1);        // Output: I am String
+console.log(string2);        // Output: i am string
+console.log(templateString); // Output: I am also a string but can be written (with line break)
 
-console.log(string1);
-console.log(string2);
-console.log(templateString);
-//there is no doffernce if you piut string in single quote or dibule quote it behave same
+//***********************************************
+// Key Points About Strings
+//***********************************************
 
-//String can be written in multiple line using ` `. and knwon as template string.
+/**
+ * 1. Single quotes (' ') and double quotes (" ") work the same way in JavaScript.
+ * 2. Template strings (backticks ` `) allow:
+ *    - Multi-line strings
+ *    - Easy variable interpolation using `${variable}`
+ * 3. Use camelCase for variable names: e.g., firstNameVar, userName, etc.
+ * 4. Strings are immutable in JavaScript:
+ *    - Once created, the value of a string cannot be changed.
+ *    - Operations like concatenation create a new string.
+ */
 
-//varibale is used in camel Case.
+//***********************************************
+// Using Strings in Functions
+//***********************************************
 
-function greet(firstNameVar){
-    console.log("Hi "+ firstName + "!!")
-    console.log(`Hi $(firstName)!`)
+function greet(firstName) {
+    // Concatenation using +
+    console.log("Hi " + firstName + "!!");  
+
+    // Template literal (preferred)
+    console.log(`Hi ${firstName}!!`);
+    /**
+     * Both outputs are same, but template literals are cleaner.
+     * Use `${variableName}` inside backticks to insert variable values.
+     */
 }
 
-let firstName = "Rishabh"
+// Calling the function
+let firstName = "Rishabh";
+greet(firstName); 
+// Output:
+// Hi Rishabh!!
+// Hi Rishabh!!
 
-greet();
+//***********************************************
+// Additional String Tips for Beginners
+//***********************************************
+
+/**
+ * 1. You can combine strings using +:
+ *    console.log("Hello " + "World"); // Hello World
+ * 2. Template literals are especially useful for multi-line text or dynamic content:
+ *    let age = 25;
+ *    console.log(`My name is ${firstName} and I am ${age} years old.`);
+ * 3. Strings have many built-in methods:
+ *    - string.length → gives the length
+ *    - string.toUpperCase() / string.toLowerCase() → change case
+ *    - string.includes("text") → checks if substring exists
+ *    - string.replace("old", "new") → replace content
+ */
