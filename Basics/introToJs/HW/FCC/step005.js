@@ -28,3 +28,4 @@ Notes / Learning:
     console.log('Hello ' + character); // prints concatenated string
 - This is an essential tool for understanding how your code behaves.
 */
+

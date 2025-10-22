@@ -31,3 +31,5 @@ Notes / Learning:
     a = 10; // correct
     let a = 10; // ❌ incorrect, would cause an error
 */
+
+console.log("Cheking the commit ")
