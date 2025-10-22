@@ -155,55 +155,161 @@ switch (days) {
 }
 
 
+//***********************************************
+// Loops in JavaScript
+//***********************************************
 /**
- * 
- * Loops
- * -> while , for loop , do while , for each
+ * JavaScript provides different types of loops to repeat tasks:
+ * 1. for loop
+ * 2. while loop
+ * 3. do-while loop
+ * 4. forEach (used with arrays)
  */
 
-
-for (let num =1 ; num<=10;num++){
-    console.log("Number is :" ,num);
+// Example: for loop from 1 to 10
+for (let num = 1; num <= 10; num++) {
+    console.log("Number is:", num);
 }
 
+//***********************************************
+// FizzBuzz Example
+//***********************************************
+/**
+ * Task: Print numbers from 1 to 20 with rules:
+ * - If divisible by 3 → print "fizz"
+ * - If divisible by 5 → print "buzz"
+ * - If divisible by both 3 & 5 → print "fizz buzz"
+ * - Otherwise, print the number itself
+ */
+
+let numbers = 20;
+for (let i = 1; i <= numbers; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("fizz buzz"); // Divisible by both 3 and 5
+    } else if (i % 3 === 0) {
+        console.log("fizz"); // Divisible by 3 only
+    } else if (i % 5 === 0) {
+        console.log("buzz"); // Divisible by 5 only
+    } else {
+        console.log(i); // Not divisible by 3 or 5
+    }
+}
+
+//***********************************************
+// Break Statement
+//***********************************************
+/**
+ * 'break' can be used inside loops to exit immediately 
+ * once a condition is met. Example is given below
+ */
+
+console.log("Break Statement Example:");
+
+for (let i = 1; i <= 10; i++) {
+    if (i === 5) {
+        console.log("Breaking the loop at i =", i);
+        break; // Exits the loop when i is 5
+    }
+    console.log("i =", i);
+}
+
+// Output:
+// i = 1
+// i = 2
+// i = 3
+// i = 4
+// Breaking the loop at i = 5
+
+
+//***********************************************
+// Functions in JavaScript
+//***********************************************
+/**
+ * Functions help write reusable blocks of code.
+ * Syntax:
+ *   function functionName() {
+ *       // code
+ *   }
+ */
+
+// Example function
+function fn() {
+    console.log("I am a Function");
+}
+
+// Calling the function multiple times
+console.log("Hello Again");
+fn(); // Output: I am a Function
+fn(); // Output: I am a Function
+
+//***********************************************
+// Function with Parameters and Return Value
+//***********************************************
 
 /**
- * fizz bzz
- * number ->20
-    1->20
-    if number is divisible by 3 ->fizz
-    if number is divisible by 5->buzz
-    if number is divisible by 3 & 5 ->fizz and buzz
+ * This function accepts two inputs (parameters) and returns their sum.
+ * 1. Parameters: a, b
+ * 2. Inside the function:
+ *    - Logs the values of a and b
+ *    - Adds a and b, stores in variable 'd'
+ *    - Returns 'd' to the caller
+ */
+
+function fun(a, b) {
+    console.log("a:", a);  // Prints the value of a
+    console.log("b:", b);  // Prints the value of b
+    let d = a + b;         // Adds a and b
+    return d;              // Returns the result to the caller
+}
+
+// Calling the function and storing the result
+let result = fun(10, 20); 
+// Step by step explanation:
+// 1. a = 10, b = 20
+// 2. Logs: a: 10
+//           b: 20
+// 3. d = 10 + 20 = 30
+// 4. Returns 30 and stores it in 'result'
+
+console.log("result:", result); // Output: result: 30
+
+//***********************************************
+// Key Notes for Beginners
+//***********************************************
+/**
+ * 1. A function can take zero or more parameters.
+ * 2. A function can return a value using 'return'.
+ * 3. We can store the returned value in a variable.
+ * 4. The order of parameters matters:
+ *    - fun(a, b) is different from fun(b, a)
  */
 
 
-    let numbers =20;
-    for(let i = 1; i <= numbers; i++){
-        if(i % 3 === 0 && i% 5 === 0){
-            console.log("fizz");
-
-        }else if(i % 5 === 0){
-            console.log("buzz");
-        }else if (i % 3 === 0){
-            console.log("fizz buzz");
-        }else{
-            console.log(i);
-        }
-    }
 
 
-    //break statement the cursor get out once the condition matches
+//*****************************
+// STRINGS : How string work in javascript */
+
+let string1 = "I am String";
+let string2 = 'i am string' 
+let templateString = `i am also a string but can be wrtitten
+in multiple line`
 
 
+console.log(string1);
+console.log(string2);
+console.log(templateString);
+//there is no doffernce if you piut string in single quote or dibule quote it behave same
 
-    /**
-     * Fucntion : Helps to write reusable block of code create 
-     */
+//String can be written in multiple line using ` `. and knwon as template string.
 
-    function fn(){
-        console.log("I am a Function");
-    }
-    console.log("Hello Again");
+//varibale is used in camel Case.
 
-    fn();
-    fn();
+function greet(firstNameVar){
+    console.log("Hi "+ firstName + "!!")
+    console.log(`Hi $(firstName)!`)
+}
+
+let firstName = "Rishabh"
+
+greet();
